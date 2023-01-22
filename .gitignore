@@ -4,3 +4,4 @@ __pycahe__
 .vscode
 .DS_Store
 db.sqlite3
+tests_*
