@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rango</title>
-  </head>
-
-  <body>
+{% extends 'rango/base.html' %} {% load static %} 
+{% block title_block %}About Rango{% endblock %}
+{% block body_block %}
     <h1>Rango says...</h1>
     <div>
       Rango says here is the about page. <br />
@@ -22,5 +14,4 @@
       <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat." />
       <br />
     </div>
-  </body>
-</html>
+{% endblock body_block %}

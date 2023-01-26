@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rango</title>
-  </head>
-
-  <body>
+{% extends 'rango/base.html' %} {% load static %}
+{% block title_block %}
+Homepage
+{% endblock title_block %}
+{% block body_block %}
     <h1>Rango says...</h1>
     <div>
       hey there partner! <br />
@@ -45,10 +39,9 @@
     </div>
 
     <div>
-      <a href="/rango/about/">About</a><br />
-      <a href="/rango/add_category/">Add a New Category</a><br />
+      <a href="{% url 'rango:about' %}">About</a><br />
+      <a href="{% url 'rango:add_category' %}">Add a New Category</a><br />
       <br />
       <img src="{% static 'images/rango.jpg'%}" alt="Picture of Rango" />
     </div>
-  </body>
-</html>
+{% endblock body_block %}
